@@ -5,9 +5,9 @@ import SiteFooter from '../components/SiteFooter.astro';
 import ResourceCard from '../components/ResourceCard.astro';
 import CategoryTabsNav from '../components/CategoryTabsNav.astro';
 
-type LocalKindId = 'shops' | 'restaurants' | 'service' | 'visit';
+type LocalKindId = 'shops' | 'restaurants' | 'service';
 
-type USStateCode = 'CA' | 'MN' | 'NC' | 'NY' | 'OR' | 'PA' | 'VA';
+type USStateCode = 'CA' | 'DC' | 'MD' | 'MN' | 'NC' | 'NY' | 'OR' | 'PA' | 'VA';
 
 interface LocalKindTab {
   id: LocalKindId;
@@ -40,11 +40,6 @@ const categories: LocalKindTab[] = [
     id: 'service',
     label: 'Care & Mutual Aid',
     description: 'Co-ops, nonprofits, and community orgs doing the real work of holding each other up.'
-  },
-  {
-    id: 'visit',
-    label: 'Worth the Trip',
-    description: 'Places that reward you for showing up in person — markets, gathering spots, and community spaces.'
   }
 ];
 
@@ -104,7 +99,7 @@ const localEntries: LocalEntry[] = [
     url: 'https://www.theplantnc.com/',
     description:
       'A nearby campus in Chatham County housing food businesses and small producers working in close loop with each other.',
-    kind: 'visit',
+    kind: 'shops',
     state: 'NC',
     city: 'Pittsboro',
     zip: '27312'
@@ -164,30 +159,10 @@ const localEntries: LocalEntry[] = [
     url: 'https://piedmontrefuge.org/',
     description:
       'A local sanctuary in Chatham County rescuing farmed animals and educating the community about compassionate, vegan living.',
-    kind: 'visit',
+    kind: 'service',
     state: 'NC',
     city: 'Pittsboro',
     zip: '27312'
-  },
-  {
-    name: 'Pacifica Cohousing',
-    url: 'https://www.pacificacohousing.com/',
-    description:
-      'A Carrboro-area cohousing community focused on collaborative neighborhood life, shared resources, and long-term belonging.',
-    kind: 'visit',
-    state: 'NC',
-    city: 'Carrboro',
-    zip: '27510'
-  },
-  {
-    name: 'Eno Commons Cohousing',
-    url: 'https://www.enocommons.org/',
-    description:
-      'A nearby intentional community organized around cooperative ownership, shared amenities, and day-to-day social connection.',
-    kind: 'visit',
-    state: 'NC',
-    city: 'Durham',
-    zip: '27705'
   },
   {
     name: "Vimala's Curryblossom Cafe",
@@ -250,14 +225,14 @@ const localEntries: LocalEntry[] = [
     zip: '20186'
   },
   {
-    name: 'Twin Oaks Community',
-    url: 'https://www.twinoaks.org/',
+    name: 'Marion Barry Avenue Market',
+    url: 'https://dreamingoutloud.org/marion-barry-avenue-market/',
     description:
-      'One of the best-known intentional communities in the U.S., centered on shared work, cooperative life, and mutual aid.',
-    kind: 'visit',
-    state: 'VA',
-    city: 'Louisa',
-    zip: '23093'
+      'A community-run grocery and café in Ward 8, SE DC — addressing a food desert with local produce, pantry staples, and hiring from within the neighborhood.',
+    kind: 'shops',
+    state: 'DC',
+    city: 'Washington',
+    zip: '20020'
   },
   {
     name: 'Ipanema Restaurant',
@@ -344,10 +319,40 @@ const localEntries: LocalEntry[] = [
     url: 'https://ecovillageithaca.org/',
     description:
       'A mature ecovillage model blending cooperative neighborhood life, ecological design, and shared infrastructure.',
-    kind: 'visit',
+    kind: 'service',
     state: 'NY',
     city: 'Ithaca',
     zip: '14850'
+  },
+  {
+    name: "Harriet's Wildest Dreams",
+    url: 'https://www.harrietsdreams.org/',
+    description:
+      'A Black-led community defense hub in SE DC offering organizing, direct action, and mutual aid rooted in abolitionist values.',
+    kind: 'service',
+    state: 'DC',
+    city: 'Washington',
+    zip: '20032'
+  },
+  {
+    name: 'Life After Release',
+    url: 'https://www.lifeafterrelease.org/',
+    description:
+      'A formerly incarcerated women-led organization in the DMV doing reentry support, digital skills training, expungement work, and court accountability organizing.',
+    kind: 'service',
+    state: 'MD',
+    city: 'Suitland',
+    zip: '20746'
+  },
+  {
+    name: 'Benevolence Farm',
+    url: 'https://benevolencefarm.org/',
+    description:
+      'A working farm in Alamance County supporting people impacted by the criminal legal system through leadership development, sustainable livelihoods, and structural advocacy.',
+    kind: 'service',
+    state: 'NC',
+    city: 'Graham',
+    zip: '27253'
   }
 ];
 
