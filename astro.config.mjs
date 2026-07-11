@@ -4,7 +4,7 @@ import vercel from "@astrojs/vercel";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://sirensong.guide",
+  site: "https://www.sirensongshop.com",
   output: "server",
   adapter: vercel({ imageService: true }),
   integrations: [react(), sitemap()],
